@@ -20,9 +20,18 @@ public class ConsoleExercises {
 
         // User enters a sentence
 
-        System.out.print("Enter a sentence: ");
-        String userSentence = scanner.nextLine();
-        System.out.printf("You entered: %s\n", userSentence);
+//        System.out.print("Enter a sentence: ");
+//        String userSentence = scanner.nextLine();
+//        System.out.printf("You entered: %s\n", userSentence);
+
+        System.out.print("Enter a length and then width: ");
+        int userLength = scanner.nextInt();
+        int userWidth = scanner.nextInt();
+        System.out.format("You entered: %s and %s\n", userLength, userWidth);
+        int perimeter = userLength + userLength + userWidth + userWidth;
+        System.out.printf("The room's perimeter is %s\n", perimeter);
+        int area = userLength * userWidth;
+        System.out.printf("The room's area is %s\n", area);
 
 
     }
