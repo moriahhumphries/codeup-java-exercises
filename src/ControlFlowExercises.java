@@ -8,7 +8,9 @@ public class ControlFlowExercises {
         System.out.print("You entered: " + userNumber + "\n");
         System.out.print("Here is your table!\nnumber | squared | cubed\n");
         for(int i = 1; i <= userNumber; i++) {
-            System.out.print(i + "\t" + "\t" + "\t" + i + "\t" + "\t" + "\t" + i + "\n");
+            int squared = i*=i;
+            int cubed = i*=i*=i;
+            System.out.print(i + "\t" + "\t" + "\t" + squared + "\t" + "\t" + "\t" + cubed + "\n");
         }
 
     }
