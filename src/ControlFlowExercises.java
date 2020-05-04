@@ -1,17 +1,13 @@
-import java.sql.SQLOutput;
+import java.util.Scanner;
 
 public class ControlFlowExercises {
     public static void main(String[] args) {
-        for(int i = 1; i <= 100; i++) {
-            System.out.println("Number: " + i);
-            if ((i % 3 == 0) && (i % 5 == 0)){
-                System.out.println("FizzBuzz: " + i);
-            } else if (i % 3 == 0)  {
-                System.out.println("Fizz: " + i);
-            } else if (i % 5 == 0) {
-                System.out.println("Buzz: " + i);
-            }
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter an integer: \n");
+        int userNumber = scanner.nextInt();
+        System.out.print("You entered: " + userNumber + "\n");
+        for(int i = 1; i <= userNumber; i++) {
+            System.out.print("Counting from 1 to your number: " + i + "\n");
         }
-
     }
 }
