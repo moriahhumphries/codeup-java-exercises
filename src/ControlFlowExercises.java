@@ -1,10 +1,10 @@
 public class ControlFlowExercises {
     public static void main(String[] args) {
-        int i = 100;
+        long i = 2;
         do {
             System.out.println("Number: " + i);
-            i-=5;
-        } while (i >= -10);
+            i*=i;
+        } while (i < 1000000);
 
     }
 }
