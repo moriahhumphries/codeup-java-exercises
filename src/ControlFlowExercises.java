@@ -2,26 +2,29 @@ import java.util.Scanner;
 
 public class ControlFlowExercises {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter an integer: ");
-        int userNumber = Integer.parseInt(scanner.nextLine());
-        System.out.print("You entered: " + userNumber + "\n");
-        System.out.print("Here is your table!\nnumber | squared | cubed\n");
+            Scanner scanner = new Scanner(System.in);
+            String answer = "";
+            do {
+            System.out.print("Enter a numerical grade from 0 - 100: ");
+            int userGrade = Integer.parseInt(scanner.nextLine());
+            System.out.print("You entered: " + userGrade + "\n");
 
-        for (int i = 1; i <= userNumber; i++) {
-                int squared = i * i;
-                int cubed = i * squared;
-                System.out.print(i + "\t" + "\t" + "\t" + squared + "\t" + "\t" + "\t" + cubed + "\n");
-        }
-        System.out.print("Would you like to continue: Yes or No? ");
-        String answer = scanner.nextLine();
-        boolean yes = true;
-        boolean no = false;
+            if (userGrade >= 88) {
+                System.out.print("You got an A!\n");
+            } else if (userGrade >= 80) {
+                System.out.print("You got a B!\n");
+            } else if (userGrade >= 67) {
+                System.out.print("You got a C.\n");
+            } else if (userGrade >= 60) {
+                System.out.print("Well, you got a D.\n");
+            } else {
+                System.out.print("It's an F, sorry bud.\n");
+            }
 
-        if (answer.equals("yes") || answer.equals("Yes")) {
-            System.out.print("Continuing!");
-        } else {
-            System.out.print("Program Finished.");
-        }
+            System.out.print("Would you like to continue: Yes or No? ");
+           answer = scanner.nextLine();
+
+            } while (answer.equalsIgnoreCase("Yes"));
+
     }
 }
