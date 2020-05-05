@@ -3,13 +3,15 @@ import java.util.Scanner;
 public class MethodsExercises {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println(addition(2, 2));
-        System.out.println(subtraction(4, 2));
-        System.out.println(multiplication(5, 2));
-        System.out.println(division(10, 2));
-        System.out.println(modulus(11, 3));
+//        System.out.println(addition(2, 2));
+//        System.out.println(subtraction(4, 2));
+//        System.out.println(multiplication(5, 2));
+//        System.out.println(division(10, 2));
+//        System.out.println(modulus(11, 3));
         System.out.print("Enter a number between 1 and 10: ");
-        int userInput = getInteger(1, 10);
+
+        System.out.println(getInteger(1, 10));
+
     }
 
     // 1
@@ -34,8 +36,9 @@ public class MethodsExercises {
     }
 
     // 2
-    public static int getInteger(int min, int max) {
-        return min + max;
+    public static int getInteger(int min, int max) {       Scanner scanner = new Scanner(System.in);
+       int userInput = scanner.nextInt();
+       return userInput;
 
     }
 
