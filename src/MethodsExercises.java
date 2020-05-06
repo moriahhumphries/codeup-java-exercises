@@ -6,6 +6,7 @@ public class MethodsExercises {
 
         Scanner scanner = new Scanner(System.in);
         getInteger(1, 10);
+        factorial();
 //        System.out.println(addition(2, 2));
 //        System.out.println(subtraction(4, 2));
 //        System.out.println(multiplication(5, 2));
@@ -48,10 +49,24 @@ public class MethodsExercises {
         // how to stop
         if (userInput < min || userInput > max) {
             System.out.println("You entered invalid number: " + userInput);
-            return getInteger(1, 10);
+            return getInteger(min, max);
         } else {
+            System.out.println("You entered a valid number!");
             return userInput;
         }
     }
 
-}
+    //3
+
+    public static void factorial(){
+        int userInput = getInteger(1, 10);
+        int sum = 1;
+        System.out.println("You entered: " + userInput);
+        for(int fact = userInput; fact > 0; fact--) {
+            sum *= fact;
+        }
+            System.out.println("Factorial of " + userInput+ ": " + sum);
+        }
+    }
+
+
