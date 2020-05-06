@@ -1,10 +1,14 @@
+import java.util.Random;
 import java.util.Scanner;
+
 
 public class MethodsExercises {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
+
         while (true) {
+
             Dice();
             System.out.println("Would you like to continue?");
             String play = scan.nextLine();
@@ -88,14 +92,30 @@ public class MethodsExercises {
 
     public static void Dice(){
 //        roll = "";
-        new java.util.Random().nextInt();
+
         Scanner scan = new Scanner(System.in);
-        System.out.println("Enter number for the sides of your first dice: ");
-    int userDice1 = Integer.parseInt(scan.nextLine());
-        System.out.println("Enter number for the sides of your second dice: ");
-        int userDice2 = Integer.parseInt(scan.nextLine());
-        int totalSides = userDice1 + userDice2;
-        System.out.print("You entered: \n" + userDice1 + " and " + userDice2 + "\n");
+        System.out.println("Enter number for the sides of your dice: ");
+        int diceSide = Integer.parseInt(scan.nextLine());
+        System.out.println("Your dice has " + diceSide + " sides");
+//        Random random = new Random();
+//        int randomRoll = random.nextInt(diceSide) + 1;
+        int range = diceSide - 1 + 1;
+        System.out.println(("randomRoll1 = " + ((int)(Math.random() * range) + 1)));
+        System.out.println(("randomRoll2 = " + ((int)(Math.random() * range) + 1)));
+
+//    int userDice1 = Integer.parseInt(scan.nextLine());
+//        System.out.println("Enter number for the sides of your second dice: ");
+//        int userDice2 = Integer.parseInt(scan.nextLine());
+//        int totalSides = userDice1 + userDice2;
+//        System.out.print("You entered: \n" + userDice1 + " and " + userDice2 + "\n");
+//        // continue message
+//
+//        Random random = new Random();
+//        public int roll() {
+//            Random rollDice = new Random();
+//            int totalRoll = rollDice.nextInt();
+//            System.out.println(totalRoll);
+//        }
 
     }
 }
