@@ -3,10 +3,27 @@ import java.util.Scanner;
 public class MethodsExercises {
 
     public static void main(String[] args) {
-
+        Scanner scan = new Scanner(System.in);
+        while (true) {
+            Dice();
+            System.out.println("Would you like to continue?");
+            String play = scan.nextLine();
+            if (play.toLowerCase().equals("no")) {
+                break;
+            }
+        }
         Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            factorial();
+            System.out.println("Would you like to continue?");
+            String answer = scanner.nextLine();
+            if (answer.toLowerCase().equals("no")) {
+                break;
+            }
+        }
+        System.out.println("Get Integer");
         getInteger(1, 10);
-        factorial();
 //        System.out.println(addition(2, 2));
 //        System.out.println(subtraction(4, 2));
 //        System.out.println(multiplication(5, 2));
@@ -67,6 +84,19 @@ public class MethodsExercises {
         }
             System.out.println("Factorial of " + userInput+ ": " + sum);
         }
-    }
 
+
+    public static void Dice(){
+//        roll = "";
+        new java.util.Random().nextInt();
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter number for the sides of your first dice: ");
+    int userDice1 = Integer.parseInt(scan.nextLine());
+        System.out.println("Enter number for the sides of your second dice: ");
+        int userDice2 = Integer.parseInt(scan.nextLine());
+        int totalSides = userDice1 + userDice2;
+        System.out.print("You entered: \n" + userDice1 + " and " + userDice2 + "\n");
+
+    }
+}
 
