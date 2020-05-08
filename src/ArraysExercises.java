@@ -1,16 +1,12 @@
 import java.util.Arrays;
 
-
-
 public class ArraysExercises {
     private String name;
 
     public ArraysExercises() {
-
     }
 
-
-    public static String[] addPerson() {
+    public static String[] personArray() {
         String[] persons = new String[3];
 
         persons[0] = "Moriah";
@@ -23,13 +19,15 @@ public class ArraysExercises {
         }
         return persons;
     }
+
+    public static addPerson(){
+
+    }
         public static void main(String[] args){
 //            int[] numbers = {1, 2, 3, 4, 5};
 //            System.out.println(Arrays.toString(numbers
 //            ));
-            System.out.println(Arrays.toString(addPerson()));
-
-
+            System.out.println(Arrays.toString(personArray()));
         }
     }
 
