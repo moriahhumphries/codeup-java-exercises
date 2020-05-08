@@ -16,4 +16,6 @@ public class Input {
         String answer = scanner.nextLine();
         return answer.equals("Yes") ? true : false;
     }
+
+    public int
 }
