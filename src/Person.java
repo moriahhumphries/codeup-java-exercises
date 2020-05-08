@@ -1,12 +1,7 @@
 public class Person {
     private String name;
 
-
-    public Person(String name) {
-        this.name = name;
-
-    }
-
+    // returns the person's name
     public String getName() {
         return this.name;
     }
@@ -21,12 +16,16 @@ public class Person {
     }
 
     public static void main(String[] args) {
-    Person me = new Person("Moriah");
-    me.getName();
+        Person testPerson = new Person();
+        testPerson.setName("Moriah");
+        System.out.println(testPerson);
+
+
 
     }
 
 }
+
 
 
 
