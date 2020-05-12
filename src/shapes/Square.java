@@ -1,12 +1,10 @@
 package shapes;
 
-
-
-
-
-
-
-
+public class Square extends Quadrilateral {
+    public Square(int length, int width) {
+        super(length, width);
+    }
+}
 
 
 //public class Square extends Rectangle {
