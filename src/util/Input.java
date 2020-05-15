@@ -21,7 +21,13 @@ public class Input {
 
     public int getInt(int min, int max){
         System.out.println("Give me a number between " + min + " and "  + max);
-        int aNumber = Integer.valueOf(scanner.nextLine());
+        int aNumber;
+        try {
+            aNumber = Integer.valueOf(scanner.nextLine());
+        } catch (NumberFormatException e) {
+            return getInt();
+        }
+
         if(aNumber < min || aNumber > max){
             System.out.println("Outside of the range, try again");
             return getInt(min, max);
