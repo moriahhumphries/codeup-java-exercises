@@ -25,7 +25,7 @@ public class Input {
         try {
             aNumber = Integer.valueOf(scanner.nextLine());
         } catch (NumberFormatException e) {
-            return getInt();
+            return getInt(min, max);
         }
 
         if(aNumber < min || aNumber > max){
